@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<title>一元特价秒杀</title>
+	<meta charset="utf-8" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="yes" name="apple-touch-fullscreen" />
+	<meta content="telephone=no,email=no" name="format-detection" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+	/>
+	<!-- build:css(./src/activitys/20151214) styles/index.css-->
+	<link href="../../bower_components/normalize/normalize.css" rel="stylesheet" />
+	<link href="../../styles/common.css" rel="stylesheet" />
+	<link href="styles/styles.css" rel="stylesheet" />
+	<!-- endbuild -->
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="main clearfix">
+			<div class="top">
+				<img src="images/bg.jpg" alt="一元特价">
+				<div class="count">
+					<i></i><span class="text-bg">已有<span id="pageCount"></span>人关注此活动</span>
+				</div>
+			</div>
+			<div class="hotel-list">
+			</div>
+			<script id="hotel-list" type="text/html">
+					{{each list}} 
+					{{if $index % 2 == 0}}
+					<div class="row ">
+					{{/if}}
+						<div class="col">
+							<div class="hotel-item fadeInUp" hotelid="{{$value.hotelid}}" >
+								<div class="hotel-img">
+									<img class="img-pic" src="{{$value.hotelpic[0].pic[0].url}}" alt="">
+									<div class="img-info">
+										<div class="row row-no-padding">
+											<div class="col"><i class="location"></i>{{($value.userdistance/1000).toFixed(2)}}km</div>
+											<!--<div class="col text-right">浏览{{$value.times}}次</div>-->
+										</div>
+									</div>
+								</div>
+								<div class="hotel-info">
+									<div class="info-name text-cut">{{$value.hotelname}}</div>
+									<div class="info-score">
+										<span class="score-star {{$value.grade>0?'score-hasstar':''}}"></span>
+										<span class="score-star {{$value.grade>2?'score-hasstar':''}}"></span>
+										<span class="score-star {{$value.grade>3?'score-hasstar':''}}"></span>
+										<span class="score-star {{$value.grade>4?'score-hasstar':''}}"></span>
+										<span class="score-star {{$value.grade==5?'score-hasstar':''}}"></span>
+										<span class="score-value">{{$value.grade}}分</span>
+									</div>
+								</div>
+								<div class="hotel-btns">
+									<div class="row row-no-padding">
+										<div class="col">
+											<div class="btn-off">
+												<span class="off-text">直降</span>
+												<span class="off-number">&yen;{{$value.minpmsprice-1}}</span>
+											</div>
+											<div class="btn-price">
+												<span class="price-one"><small>&yen;</small><span>1</span></span>
+												<span class="price-off">&yen;{{$value.minpmsprice}}</span>
+											</div>
+										</div>
+										<div class="col text-right">
+												<a href="javascript:;"  class="btn-buy {{$value.btnDisabled?'disabled':''}}">{{$value.btnText}}</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					{{if $index%2==1}}
+					</div>
+					{{/if}} 
+					{{/each}}
+				</script>
+			<div class="footer">
+				<span>本活动最终解释权归眯客所有</span>
+			</div>
+		</div>
+	</div>
+	<div id="diag-tip" class="modal" style="display:none;">
+		<div class="mask"></div>
+		<div class="model-content">
+			<div class="diag-tip">
+				<p>
+					亲，听说附近还有今夜特价房，去看看吧！
+				</p>
+				<div class="text-center">
+					<a href="javascript:;" id="btn-go-special" class="btn-go-special">去看看特价房</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<!-- build:js(./src/activitys/20151214)    scripts/index.js-->
+<script src="../../bower_components/zepto/zepto.custom.js"></script>
+<script src="../../bower_components/artTemplate/dist/template.js"></script>
+<script src="../../bower_components/iscroll/build/iscroll-lite.js"></script>
+<script src="../../scripts/common.zepto.js"></script>
+<script src="../../scripts/analytics.zepto.js"></script>
+<script src="../../scripts/mkbridge.js"></script>
+<script src="scripts/index.js"></script>
+<!-- endbuild -->

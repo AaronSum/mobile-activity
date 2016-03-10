@@ -1,0 +1,24 @@
+.main {
+	max-width: 640px
+}
+img {
+	display: block;
+	width: 100%;
+	line-height: 0;
+}
+.area-btns{
+	position: relative;
+}
+
+.area-btns .btns{
+	position: absolute;
+	top:0;
+}
+.area-btns .links{
+	position: absolute;
+	top:0;
+}
+.area-btns  .btn-link{
+	display: block;
+	height: 5em;
+}

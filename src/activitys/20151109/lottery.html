@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>眯客触屏版</title>
+		<meta charset="utf-8" />
+		<meta name="data-spm" content="a215s" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="yes" name="apple-touch-fullscreen" />
+		<meta content="telephone=no,email=no" name="format-detection" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+		<!-- build:css(./src/activitys/20151109) styles/all.css-->
+		<link href="../../bower_components/normalize/normalize.css" rel="stylesheet" />
+		<link href="../../styles/common.css" rel="stylesheet" />
+		<link href="styles/styles.css" rel="stylesheet" />
+		<!-- endbuild -->
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="main">
+				<div>
+					<img src="images/bg_1.png" alt="" />
+				</div>
+				<div>
+					<img src="images/bg_2.png" alt="" />
+					<div class="eggs">
+						<div class="row">
+							<div class="col">
+								<div class="egg "></div>
+							</div>
+							<div class="col">
+								<div class="egg"></div>
+							</div>
+							<div class="col">
+								<div class="egg"></div>
+							</div>
+						</div>
+						<div class="row" style="width: 98%;margin-top: -4%;">
+							<div class="col">
+								<div class="egg"></div>
+							</div>
+							<div class="col">
+								<div class="egg"></div>
+							</div>
+							<div class="col">
+								<div class="egg"></div>
+							</div>
+						</div>
+						<div class="row" style="width: 96%;">
+							<div class="col">
+								<div class="egg"></div>
+							</div>
+							<div class="col">
+								<div class="egg"></div>
+							</div>
+							<div class="col">
+								<div class="egg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<img src="images/bg_3.png" alt="" />
+					<div class="btn-viewresult">
+						<a href="javascript:;" id="btn-viewresult">
+							<img src="images/viewresult.png" alt="" />
+						</a>
+					</div>
+				</div>
+				<div>
+					<img src="images/bg_4.png" alt="" />
+				</div>
+				<div>
+					<img src="images/bg_5.png" alt="" />
+				</div>
+				<div>
+					<img src="images/bg_6.png" alt="" />
+				</div>
+				<div>
+					<img src="images/bg_7.png" alt="" />
+
+				</div>
+				<div>
+					<img src="images/bg_8.png" alt="" />
+				</div>
+				<div>
+					<img src="images/bg_9.png" alt="" />
+
+				</div>
+				<div>
+					<img src="images/bg_10.png" alt="" />
+				</div>
+				<div>
+					<img src="images/bg_11.png" alt="" />
+				</div>
+				<div>
+					<img src="images/bg_12.png" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div class="modal log_modal" style="display:none;">
+			<div class="modal_mask"></div>
+			<div class="modal_content">
+				<div class="modal_close"></div>
+				<div class="log">
+					<h4>我的中奖记录</h4>
+					<ul></ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal verify_modal" style="display:none;z-index: 9999;">
+			<div class="modal_mask"></div>
+			<div class="modal_content">
+				<div class="modal_close" style="display: none;"></div>
+				<div class="log">
+					<section class="login">
+						<h4>请验证您的手机</h4>
+						<div class="row row-no-padding">
+							<div class="col">
+								<input type="text" id="tbPhone" placeholder="请输入手机号" />
+							</div>
+						</div>
+						<div class="row row-no-padding">
+							<div class="col">
+								<input type="text" id="tbCode" placeholder="验证码" />
+							</div>
+							<div class="col btn-verify">
+								<a class="btn" href="javascript:;" id="btn-verify">获取验证码</a>
+							</div>
+						</div>
+						<div class="row row-no-padding btn-bottom">
+							<div class="col">
+								<a class="btn" href="javascript:;" id="btn-ok">确 认</a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal result_modal" style="display:none;">
+			<div class="modal_mask"></div>
+			<div class="modal_content">
+				<div class="modal_close"></div>
+				<div class="result">
+					<h3 class="title">恭喜您获得</h3>
+					<h3 class="prize"></h3>
+					<!--<div class="ticket">
+						<span>兑换码:</span>
+						<input type="text" id="" placeholder=""  value="dkjfalkjsedkljfaskjldfks"/>
+					</div>-->
+					<div><a class="btn-link" href="javascript:;" id="btn-link">点击领取</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="modal error_modal" style="display:none;">
+			<div class="modal_mask"></div>
+			<div class="modal_content">
+				<div class="modal_close"></div>
+				<div class="result">
+					<div class="error-msg">
+						</h3>
+					</div>
+				</div>
+			</div>
+	</body>
+</html>
+<!-- build:js(./src/activitys/20151109)    scripts/all.js-->
+<script src="../../bower_components/zepto/zepto.min.js"></script>
+<script src="../../bower_components/iscroll/build/iscroll-lite.js"></script>
+<script src="../../scripts/common.zepto.js"></script>
+<script src="../../scripts/analytics.zepto.js"></script>
+<script src="scripts/lottery.js"></script>
+<!-- endbuild -->

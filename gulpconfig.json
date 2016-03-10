@@ -1,0 +1,34 @@
+{
+	"buildPath": "./build",
+	"serviceUrl": {
+		"bmsinterface": {
+			"src": "//bmsinterface.imike.cn/",
+			"smlt": "//bmsinterface.imike.cn/",
+			"product": "//bmsinterface.imike.com/"
+		},
+		"ots": {
+			"src": "//huidu.imike.cn/",
+			"smlt": "//huidu.imike.cn/",
+			"product": "//ots.imike.com/"
+		},
+		"if": {
+			"src": "//if.imike.cn/",
+			"smlt": "//if.imike.cn/",
+			"product": "//if.imike.com/"
+		}
+	},
+	"actions": [
+		{
+			"src": [
+				"!./src/bower_components/**/*",
+				"./src/**/*.png",
+				"./src/**/*.jpg",
+				"./src/**/*.jpeg",
+				"./src/**/*.gif",
+				"favicon.ico"
+			],
+			"dest": "",
+			"code": ["xcopy","opimage"]
+		}
+	]
+}
